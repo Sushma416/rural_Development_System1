@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  .donate-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    padding: 0;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .image-header-container {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
+  
+  .image-header-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+ 
+  
+  .donate-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: -200px; /* This adjusts the overlap effect */
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  .text-content {
+    flex: 1;
+    padding: 20px;
+    text-align: justify;
+  }
+  
+  .donation-form-container {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    animation: fadeInRight 1s ease-in-out;
+    margin-top:30px;
+  }
+  
+  .donate-content h1, .donate-content p {
+    margin: 20px 0;
+  }
+  
+  .donation-info {
+    text-align: left;
+  }
+  
+  .donation-info h2 {
+    margin-bottom: 20px;
+  }
+  
+  .donation-info ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .donation-info ul li {
+    margin-bottom: 10px;
+  }
+  
+  .donation-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .donation-form label {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .donation-form input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .donation-form button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .donation-form button:hover {
+    background-color: #218838;
+  }
+  
+  .contact-container {
+    width: 100%;
+    max-width: 1200px;
+    text-align: left;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 20px 0;
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  .contact-container h2 {
+    margin-bottom: 20px;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInRight {
+    0% {
+      transform: translateX(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  

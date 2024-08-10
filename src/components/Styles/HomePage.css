@@ -1,0 +1,456 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Hero Section */
+.hero-section {
+  margin-bottom: 60px;
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  color: white;
+  border-radius: 5px;
+}
+
+.carousel-caption h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.carousel-caption p {
+  font-size: 1.25rem;
+}
+
+/* What is Rural Edge Section */
+/* Container section styling */
+.rural-edge-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  overflow: hidden; /* Ensure child elements with animations don’t overflow */
+}
+
+/* Heading styling */
+.rural-edge-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+  opacity: 0; /* Start with hidden element for animation */
+  transform: translateX(-20px); /* Start position for animation */
+  animation: fadeInUp 1s forwards; /* Apply fade-in-up animation */
+}
+
+/* Paragraph styling */
+.rural-edge-section p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #555;
+  line-height: 1.6;
+  opacity: 0; /* Start with hidden element for animation */
+  transform: translateX(-20px); /* Start position for animation */
+  animation: fadeInUp 1s 0.5s forwards;
+  text-align: justify; /* Apply fade-in-up animation with delay */
+}
+
+/* Button styling */
+.btn-read-more {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  opacity: 0; /* Start with hidden element for animation */
+  transform: translateY(20px); /* Start position for animation */
+  animation: fadeInUp 1s 1s forwards; /* Apply fade-in-up animation with delay */
+}
+
+/* Image styling */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  opacity: 0; /* Start with hidden element for animation */
+  transform: translateY(20px); /* Start position for animation */
+  animation: fadeInUp 1s 1.5s forwards; /* Apply fade-in-up animation with delay */
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* Animation classes */
+.animate-left {
+  opacity: 0; /* Start with hidden element for animation */
+  transform: translateX(-20px); /* Start position for animation */
+  animation: fadeInLeft 1s forwards; /* Apply fade-in-left animation */
+}
+
+.animate-right {
+  opacity: 0; /* Start with hidden element for animation */
+  transform: translateX(20px); /* Start position for animation */
+  animation: fadeInRight 1s forwards; /* Apply fade-in-right animation */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .rural-edge-section {
+      padding: 40px 10px;
+  }
+  
+  .rural-edge-section h2 {
+      font-size: 2rem;
+  }
+  
+  .rural-edge-section p {
+      font-size: 1rem;
+  }
+  
+  .btn-read-more {
+      font-size: 0.9rem;
+  }
+}
+
+
+/* Services Section */
+
+.services-section {
+  padding: 60px 0;
+  background-color: #fff;
+}
+
+.services-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.service-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.service-card img {
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover img {
+  transform: scale(1.1);
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-card h3 {
+  margin-top: 15px;
+  font-size: 1.5rem;
+}
+
+.service-card p {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #666;
+}
+
+.service-card .btn1 {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.service-card .btn1:hover {
+  background-color: #555;
+  transform: translateY(-2px);
+}
+
+/* AboutUsSection.css */
+.about-us-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+  padding: 40px;
+  color: #000;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+.about-us-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 20px;
+  box-shadow: 0 54px 56px rgba(221, 34, 199, 0.1);
+  border-radius: 50%;
+}
+
+.about-us-content {
+  
+  padding: 20px;
+  border-radius: 8px;
+
+  max-width: 500px;
+  height: 300px;
+  text-align: left;
+}
+
+.about-us-content h3 {
+  font-size: 1rem;
+  color: #7c8ba1;
+  margin-bottom: 10px;
+}
+
+.about-us-content h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #4a4a4a;
+}
+
+.about-us-content p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #4a4a4a;
+}
+
+.learn-more-button {
+  background-color: #7c8ba1;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.learn-more-button:hover {
+  background-color: #5f6f84;
+}
+
+.image-credit {
+  position: absolute;
+  bottom: 10px;
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+.image-credit a {
+  color: #ff7f50;
+  text-decoration: none;
+}
+
+.image-credit a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Section */
+.contact-section {
+  position: relative;
+  padding: 60px 20px;
+  color: #333;
+  overflow: hidden;
+  background: url('https://wallpapercave.com/wp/wp6366766.jpg') no-repeat center center;
+  background-size: cover;
+  filter: blur(0px);
+}
+
+.contact-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1220px;
+  height: 420px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 70px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.container1 {
+  width: 370px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #222;
+  text-align: center;
+  position: relative;
+}
+
+.contact-section h2::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: #555; /* Medium grey */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.contact-section h2:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.btn1 {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn1:hover {
+  background-color: #555;
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+      padding: 40px 10px;
+  }
+  
+  .contact-section h2 {
+      font-size: 2rem;
+  }
+  
+  .form-control {
+      font-size: 1rem;
+  }
+  
+  .btn1 {
+      font-size: 0.9rem;
+  }
+}
+
+/* Footer */
+footer {
+  padding: 40px 0;
+  background-color: #333;
+  color: #fff;
+}
+
+footer h4 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+footer p {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.social-icons {
+  margin-bottom: 20px;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #666;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+}
+
+.search-bar:focus {
+  border-color: #333;
+  outline: none;
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}

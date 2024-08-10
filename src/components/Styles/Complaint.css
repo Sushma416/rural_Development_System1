@@ -1,0 +1,80 @@
+/* Complaint Container Styles */
+.complaint-container {
+    background-color: #ffffff;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 900px;
+    height: 600px;
+    margin: 40px auto;
+    border-radius: 8px;
+    margin-bottom: 100px;
+  }
+  
+  .complaint-content {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+  
+  .complaint-form {
+    flex: 1;
+  }
+  
+  .complaint-form h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .complaint-form input,
+  .complaint-form button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+  }
+  .complaint-form textarea{
+    padding:20px;
+  }
+  
+  .complaint-form textarea {
+    resize: vertical;
+    height: 120px;
+  }
+  
+  .complaint-form button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .complaint-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .complaint-image {
+    flex: 1;
+  }
+  
+  .complaint-image img {
+    width: 100%;
+    
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .complaint-content {
+      flex-direction: column;
+    }
+  
+    .complaint-image {
+      margin-top: 20px;
+    }
+  }
+  .lo{
+margin-top: 60px;
+  }
