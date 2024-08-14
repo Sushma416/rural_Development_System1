@@ -15,6 +15,7 @@ const Navbar = ({ toggleUserDashboard }) => {
         <li><Link to="/posts">Posts</Link></li>
         <li><Link to="/feedback">About Us</Link></li>
         <li><Link to="/admin-contact">Donate</Link></li>
+        <li><Link to="/admin"><img src="https://tse2.mm.bing.net/th?id=OIP.fMN6ZYV3Ia4FJyGVxCFhPAHaHu&pid=Api&P=0&h=180" height="30px" width="30px" class="logo"></img></Link></li>
        
       </ul>
     </nav>

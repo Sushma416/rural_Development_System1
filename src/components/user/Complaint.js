@@ -97,7 +97,7 @@ const Complaint = ({ addComplaint }) => {
           </form>
         </div>
         <div className="complaint-image">
-          <img src="https://media.istockphoto.com/id/1494742638/vector/%D1%81omplaint-form-online-concept-vector-illustration.jpg?s=612x612&w=0&k=20&c=cEFqNxHTsYiIgOdPdQ7fQ3BYXj7Rq6Mp0sKDAWRA9Eo=" alt="Complaint Banner" width="300px" height="450px" class="lo"/>
+          <img src="https://media.istockphoto.com/id/1494742638/vector/%D1%81omplaint-form-online-concept-vector-illustration.jpg?s=612x612&w=0&k=20&c=cEFqNxHTsYiIgOdPdQ7fQ3BYXj7Rq6Mp0sKDAWRA9Eo=" alt="Complaint Banner" class="lo"/>
         </div>
       </div>
     </div>

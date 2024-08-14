@@ -2,6 +2,7 @@ import React from 'react';import { Carousel } from 'react-bootstrap'; // Import 
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import '../Styles/HomePage.css';
 import { Link } from 'react-router-dom';
+import Contact from '../user/Contact';
 import Hero from './Hero'; // Import custom CSS
 
 const services = [
@@ -85,18 +86,7 @@ function Home() {
       <section className="contact-section" id="contact">
       <div className="container1">
           <h2>Get in Touch</h2>
-          <form className="contact-form">
-              <div className="form-group">
-                  <input type="text" className="form-control" placeholder="Your Name" />
-              </div>
-              <div className="form-group">
-                  <input type="email" className="form-control" placeholder="Your Email" />
-              </div>
-              <div className="form-group">
-                  <textarea className="form-control" placeholder="Your Message"></textarea>
-              </div>
-              <button type="submit" className="btn1">Send Message</button>
-          </form>
+          <Contact/>
       </div>
   </section>
 

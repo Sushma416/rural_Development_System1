@@ -1,0 +1,129 @@
+/* AdminMessage.css */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
+.admin-users-page {
+  display: flex;
+ 
+}
+
+.admin-message-container {
+  width: 80%;
+  max-width: 1000px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out; /* Fade-in effect for the container */
+  font-family: 'Open Sans', sans-serif; 
+  margin-left: 260px;/* Font for the container */
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #92cee5;
+  font-family: 'Roboto Slab', serif; /* Font for headings */
+  font-weight: 700; /* Bold weight for headings */
+  animation: slideIn 0.5s ease-in-out; /* Slide-in effect for heading */
+}
+
+/* Error message styling */
+.error-message {
+  color: #ff4d4d; /* Red color for error messages */
+  background-color: rgba(255, 77, 77, 0.1); /* Light red background */
+  border: 1px solid #ff4d4d; /* Red border */
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-family: 'Open Sans', sans-serif; /* Font for error messages */
+  font-weight: 600; /* Semi-bold weight for readability */
+  animation: fadeIn 1s ease-in-out; /* Fade-in effect for error messages */
+}
+
+/* Container for the list of messages */
+.messages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between message containers */
+}
+
+.message {
+  background: rgba(0, 123, 255, 0.05); /* Light blue background for message containers */
+  border-left: 4px solid rgba(0, 123, 255, 0.7); /* Blue left border */
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+  font-family: 'Open Sans', sans-serif; /* Font for messages */
+}
+
+.message:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  background-color: rgba(0, 123, 255, 0.1); /* Slightly darker blue background on hover */
+}
+
+.message h3 {
+  margin: 0 0 5px 0;
+  color: #333;
+  font-family: 'Roboto Slab', serif; /* Font for message headings */
+  font-weight: 700; /* Bold weight for readability */
+}
+
+.message p {
+  margin: 0;
+  color: #666;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .admin-message-container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .message {
+    padding: 12px;
+  }
+}
+
+/* Adjustments for smaller devices */
+@media (max-width: 480px) {
+  .admin-message-container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .message {
+    padding: 10px;
+  }
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

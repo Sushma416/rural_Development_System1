@@ -1,0 +1,114 @@
+/* Admin Complaint Page Styles */
+.admin-complaint-page {
+    display: flex;
+   
+}
+
+
+
+.admin-complaint-content {
+    flex-grow: 1;
+    margin-left: 270px; /* Adjust for sidebar width */
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.admin-complaint-content h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+    animation: slideIn 1s ease-in-out;
+    font-family: 'Montserrat', sans-serif; /* Unique font style */
+}
+
+/* Complaint List */
+.complaint-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.complaint-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.complaint-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.complaint-item h3 {
+    font-size: 1.5em;
+    margin-top: 0;
+    color: #007bff;
+    font-family: 'Lato', sans-serif;
+}
+
+.complaint-item p {
+    margin: 5px 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #666;
+}
+
+/* Complaint Image */
+.complaint-image {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    overflow: hidden;
+    width: 100%;
+    height: 200px; /* Fixed height for images */
+    border-radius: 8px;
+}
+
+.complaint-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio */
+    transition: transform 0.3s ease;
+}
+
+.complaint-image img:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

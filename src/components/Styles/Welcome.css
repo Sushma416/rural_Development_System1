@@ -1,0 +1,38 @@
+.welcome-container {
+    background-image: url('https://wallpapercave.com/wp/wp3279322.jpg'); /* Add your image path here */
+    background-size: cover; /* Ensure the background image covers the entire container */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    padding: 203px;
+    color: white;
+    text-align: left;
+    animation: fadeIn 2s ease-in-out;
+    margin-left: 250px;
+}
+  
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+  
+.welcome-message {
+    font-size: 2.5em;
+    margin: 0;
+    animation: slideIn 2s ease-in-out;
+    color: aliceblue;
+}
+  
+@keyframes slideIn {
+    0% { transform: translateY(-100px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+  
+.welcome-description {
+    font-size: 1.2em;
+    margin-top: 10px;
+    animation: fadeIn 3s ease-in-out;
+}
+  
+.admin-users-page {
+    display: flex;
+}

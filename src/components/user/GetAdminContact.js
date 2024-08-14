@@ -5,9 +5,41 @@ import Modal from './Modal';
 
 const Donate = () => {
   const [isModalOpen, setModalOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    amount: ''
+  });
 
-  const handleDonateClick = () => {
-    setModalOpen(true);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleDonateClick = (e) => {
+    e.preventDefault();
+
+    fetch('http://localhost:8080/api/donations/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData),
+    })
+    .then(response => response.text())
+    .then(data => {
+      window.alert(data); // Alert for success message
+      setFormData({
+        name: '',
+        email: '',
+        amount: ''
+      });
+      setModalOpen(true); // Open modal after donation is successful
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      window.alert('There was an issue processing your donation. Please try again.'); // Alert for error message
+    });
   };
 
   const handleClose = () => {
@@ -41,17 +73,38 @@ const Donate = () => {
           <div className="donation-form-container">
             <h2>Make a Donation</h2>
             <center>
-              <form className="donation-form" onSubmit={(e) => e.preventDefault()}>
+              <form className="donation-form" onSubmit={handleDonateClick}>
                 <label>
-                  <input type="text" name="name" required placeholder="Name" />
+                  <input
+                    type="text"
+                    name="name"
+                    required
+                    placeholder="Name"
+                    value={formData.name}
+                    onChange={handleChange}
+                  />
                 </label>
                 <label>
-                  <input type="email" name="email" required placeholder="Email" />
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    placeholder="Email"
+                    value={formData.email}
+                    onChange={handleChange}
+                  />
                 </label>
                 <label>
-                  <input type="number" name="amount" required placeholder="Amount" />
+                  <input
+                    type="number"
+                    name="amount"
+                    required
+                    placeholder="Amount"
+                    value={formData.amount}
+                    onChange={handleChange}
+                  />
                 </label>
-                <button type="button" onClick={handleDonateClick}>Donate Now</button>
+                <button type="submit">Donate Now</button>
               </form>
             </center>
           </div>
